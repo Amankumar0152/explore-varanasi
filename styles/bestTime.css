@@ -1,0 +1,174 @@
+.best-time-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.best-time-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.best-time-section .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.best-time-section .section-header h2 {
+    font-size: 2.5rem;
+    color: #2C3E50;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.best-time-section .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #FFA726, #3F51B5);
+    border-radius: 2px;
+}
+
+.best-time-section .section-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.best-time-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.best-time-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.season-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #FFA726;
+    transition: transform 0.3s ease;
+}
+
+.season-card:hover {
+    transform: translateY(-5px);
+}
+
+.season-card h3 {
+    color: #2C3E50;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.season-card h3::before {
+    content: '•';
+    color: #FFA726;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.season-card p {
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.festival-highlight {
+    background: linear-gradient(135deg, #3F51B5, #303F9F);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(63, 81, 181, 0.3);
+}
+
+.festival-highlight h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.festival-highlight h4::before {
+    content: '🎉';
+    margin-right: 10px;
+}
+
+.festival-highlight p {
+    line-height: 1.7;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.best-time-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.best-time-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.best-time-image:hover img {
+    transform: scale(1.05);
+}
+
+.best-time-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 167, 38, 0.1), rgba(63, 81, 181, 0.1));
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .best-time-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .best-time-image {
+        order: -1;
+    }
+    
+    .best-time-image img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .best-time-section {
+        padding: 60px 0;
+    }
+    
+    .best-time-section .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .season-card,
+    .festival-highlight {
+        padding: 20px;
+    }
+}
