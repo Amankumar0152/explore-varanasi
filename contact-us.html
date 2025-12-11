@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Varanasi Tours</title>
+  <link rel="stylesheet" href="css/contact-us.css"/>
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F9F9F9">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
+  <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us Explore Banaras">
+    <meta property="og:description" content="Your expert local guide. Contact us for inquiries or to book a tour.">
+    <meta property="og:image" content="https://www.varanasitouristguide.com/preview-img/vns-link.webp">
+    <meta property="og:image:alt" content="A beautiful view of Varanasi ghats during sunrise with boats on the Ganga river.">
+    <meta property="og:url" content="https://www.varanasitouristguide.com/">
+    <meta property="og:type" content="website">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us || Explore Banaras">
+    <meta name="twitter:description" content="Contact us for inquiries or to book a tour with your expert local guide in Varanasi.">
+    <meta name="twitter:image" content="https://www.varanasitouristguide.com/preview-img/vns-link.webp">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=content_copy" />
+</head>
+<body id="pageBody">
+  <section class="contact-hero">
+    <h1>Get in Touch</h1>
+    <p>
+      We'd love to help you explore Varanasi. Whether you're planning a trip, looking for a guide, or have a question — just fill the form below!
+    </p>
+  </section>
+
+   <div class="contact">
+            <h3>Contact Me</h3>
+            <div class="contact-methods">
+                <a href="mailto:Onlineanuj223@gmail.com" class="contact-btn">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="tel:+918318898909" class="contact-btn">
+                    <i class="fas fa-phone"></i> Call
+                </a>
+                <a href="https://wa.me/918318898909" target="_blank" class="contact-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <p class="intro-text">Why are you contacting us? For inquiry or for tours? Please fill the form below.</p>
+
+      <form action="https://formspree.io/f/xrbkrjaz" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name*</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address*</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number*</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp Number*</label>
+          <input type="tel" id="whatsapp" name="whatsapp" required />
+        </div>
+
+        <div class="form-group">
+          <label for="purpose">Reason for Contact*</label>
+          <select id="purpose" name="purpose" required>
+            <option value="">-- Select --</option>
+            <option value="Inquiry">General Inquiry</option>
+            <option value="Tour">Tour</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="tourOptions" style="display: none;">
+          <label for="tourType">Select Tour Type*</label>
+          <select id="tourType" name="tourType">
+            <option value="">-- Choose Tour --</option>
+            <option value="Heritage Walk">Heritage Walk</option>
+            <option value="Morning Boat Ride">Morning Boat Ride</option>
+            <option value="Evening Ganga Aarti">Evening Ganga Aarti</option>
+            <option value="Full Day Varanasi Tour">Full Day Varanasi Tour</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message (optional)</label>
+          <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="Write your message in brief..."></textarea>
+        </div>
+
+        <input type="text" name="_gotcha" style="display:none" />
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact details -->
+   <div class="contact-details">
+    <h1>Contact-Details</h1>
+    <div class="details">
+      <p>Email: Onlineanuj223@gmail.com</p>
+      <p>Phone: +91 83188 98909</p>
+      <p>Phone: +91 80045 25243</p>
+    </div>
+   </div>
+
+  <!-- 👇 Footer placeholder -->
+  <div id="footer-placeholder"></div>
+  <!-- JS for footer include -->
+  <script src="scripts/include.js"></script>
+
+  <script src="js/contact-us.js"></script>
+</body>
+</html>
