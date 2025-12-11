@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1969950131013352"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <title>Book Tour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/confirm-booking.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+  <section class="form-container">
+    <h2>Tour Booking Form</h2>
+    <form id="bookingForm">
+      <label>Your Name</label>
+      <input type="text" id="name" required>
+
+      <label>Your Email</label>
+      <input type="email" id="email" required>
+
+      <label>Your Phone (with country code)</label>
+      <input type="tel" id="phone" placeholder="+91..." required>
+
+      <label>Select Tour Date</label>
+      <input type="date" id="date" required>
+
+      <label>Select Time</label>
+      <select id="time" required>
+        <option value="">-- Select Time --</option>
+        <option>6:00 AM – Morning Tour</option>
+        <option>10:00 AM</option>
+        <option>3:00 PM</option>
+        <option>5:30 PM – Ganga Aarti</option>
+        <option>7:00 PM</option>
+      </select>
+
+      <label>Number of People (Max 6)</label>
+      <select id="people" required>
+        <option value="">-- Select --</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+      </select>
+
+      <label>Tour</label>
+      <input type="text" id="tour" readonly>
+
+      <label>Price (USD)</label>
+      <input type="text" id="price" readonly>
+
+      <label>Message (optional)</label>
+      <textarea id="message" rows="4" placeholder="Anything you want to tell us?"></textarea>
+      <button type="button" onclick="payAdvance()">💳 Pay ₹200 Now (Optional)</button>
+      <button type="submit">Confirm Booking on WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Bottom Note -->
+  <div class="notice-box">
+    <strong>🔔 Note:</strong> We may ask for a small advance payment to confirm your booking. This amount will be adjusted in the final tour payment.
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("tour").value = params.get("tour") || '';
+    document.getElementById("price").value = params.get("price") || '';
+
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+      const people = document.getElementById("people").value;
+      const tour = document.getElementById("tour").value;
+      const price = document.getElementById("price").value;
+      const msg = document.getElementById("message").value;
+
+      const whatsappNumber = "918318898909"; // Replace with your number
+      const text = `*New Tour Booking*\n\n👤 Name: ${name}\n📧 Email: ${email}\n📱 Phone: ${phone}\n🗓️ Date: ${date}\n🕒 Time: ${time}\n👥 People: ${people}\n🎯 Tour: ${tour}\n💰 Price: $${price}\n📝 Message: ${msg}`;
+
+      // alert("✅ Your booking message will open in WhatsApp. Please confirm there.");
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank'); // Open WhatsApp
+      setTimeout(() => {
+        window.location.href = "thankyou.html";
+      }, 3000); // Redirect after 3 seconds
+
+    });
+  </script>
+
+  <script>
+function payAdvance() {
+  const name = document.getElementById("name").value || "Guest";
+  const email = document.getElementById("email").value || "guest@example.com";
+  const phone = document.getElementById("phone").value || "9999999999";
+
+  const options = {
+    key: "rzp_live_h8Pwjkga02Sj63", // 🔁 Replace with your Razorpay TEST key
+    amount: 20000, // ₹200 × 100 paise
+    currency: "INR",
+    name: "Explore Varanasi",
+    description: "Tour Advance Booking",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Varanasi_City_Seal.png/120px-Varanasi_City_Seal.png",
+    handler: function (response) {
+      alert("✅ Payment Successful! Transaction ID:\n" + response.razorpay_payment_id);
+      window.location.href = "thankyou.html";
+    },
+    prefill: {
+      name: name,
+      email: email,
+      contact: phone
+    },
+    theme: {
+      color: "#0B5FFF"
+    }
+  };
+
+  const rzp = new Razorpay(options);
+  rzp.open();
+}
+</script>
+
+</body>
+</html>
