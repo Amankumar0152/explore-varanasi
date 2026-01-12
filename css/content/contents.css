@@ -70,9 +70,9 @@
             transition: var(--transition);
         }
 
-        .tour-card:hover .tour-img {
+        /* .tour-card:hover .tour-img {
             transform: scale(1.05);
-        }
+        } */
 
         .tour-content {
             padding: 25px;
