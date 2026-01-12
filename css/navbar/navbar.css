@@ -6,7 +6,7 @@
         }
 
         :root {
-            --primary-color: #FFA726; /* Soft Orange */
+            --primary-color: #3646A8; /* Soft Orange */
             --secondary-color: #FF9800; /* Warm Orange */
             --accent-color: #3F51B5; /* Indigo Blue */
             --accent-hover: #303F9F; /* Darker Blue for hover */
@@ -27,8 +27,8 @@
 
         /* Header Styles */
         header {
-            background-color: #3646A8;
-            /* background-color: var(--primary-color); */
+            /* background-color: #3646A8; */
+            background-color: var(--primary-color);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
