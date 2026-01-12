@@ -12,7 +12,4 @@ This website helps travelers discover **famous ghats, temples, local food, tradi
 - A user-friendly interface for **exploring and booking experiences**
 - Contact options for local guidance and inquiries
 
----
-
-## 📸 Screenshots
-(Add screenshots here once your site is ready)  
+-- 
