@@ -97,29 +97,12 @@
 .footer-links a {
     color: #bdc3c7;
     text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-    position: relative;
-    padding-left: 0;
-}
-
-.footer-links a::before {
-    content: '›';
-    position: absolute;
-    left: -15px;
-    color: #FFA726;
-    transition: all 0.3s ease;
-    opacity: 0;
 }
 
 .footer-links a:hover {
-    color: #FFA726;
-    padding-left: 15px;
+    color: #f1f1f1;
 }
 
-.footer-links a:hover::before {
-    opacity: 1;
-}
 
 /* Contact Info */
 .contact-info {
