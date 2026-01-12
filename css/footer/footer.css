@@ -1,5 +1,5 @@
 .site-footer {
-    background: linear-gradient(135deg, #1a5276, #2c3e50);
+    background: linear-gradient(135deg, #1a5edb, #384653);
     color: white;
     padding: 60px 0 0;
     margin-top: 80px;
@@ -51,10 +51,11 @@
 }
 
 .footer-description {
-    color: #bdc3c7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
     line-height: 1.6;
     margin-bottom: 25px;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 /* Social Links */
@@ -78,9 +79,7 @@
 }
 
 .social-link:hover {
-    background: #FFA726;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 167, 38, 0.4);
+    background: lightslategray;
 }
 
 /* Footer Links */
@@ -128,11 +127,11 @@
 .contact-item a {
     color: #bdc3c7;
     text-decoration: none;
-    transition: color 0.3s ease;
+    /* transition: color 0.3s ease; */
 }
 
 .contact-item a:hover {
-    color: #FFA726;
+    color: white;
 }
 
 /* Footer Bottom */
