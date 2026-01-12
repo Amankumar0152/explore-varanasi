@@ -106,10 +106,6 @@
     border-left: 4px solid #3F51B5;
 }
 
-.history-item:hover {
-    transform: translateX(10px);
-}
-
 .history-icon {
     font-size: 2rem;
     flex-shrink: 0;

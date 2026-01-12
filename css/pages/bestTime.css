@@ -62,10 +62,6 @@
     transition: transform 0.3s ease;
 }
 
-.season-card:hover {
-    transform: translateY(-5px);
-}
-
 .season-card h3 {
     color: #2C3E50;
     font-size: 1.4rem;
