@@ -106,6 +106,11 @@
             z-index: 100;
             border-top: 4px solid var(--accent-color);
         }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
 
         .dropdown li {
             width: 100%;
@@ -155,9 +160,7 @@
             transition: var(--transition);
             border-radius: 2px;
         }
-
-
-
+        
         /* Booking Section */
         .booking-section {
             background: linear-gradient(135deg, #1a5edb, #384653);
