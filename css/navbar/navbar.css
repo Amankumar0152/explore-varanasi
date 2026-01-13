@@ -219,7 +219,7 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
     border: none;
     cursor: pointer;
     text-transform: uppercase;
@@ -231,13 +231,12 @@
 .primary-btn {
     background: linear-gradient(135deg, #FF9800, #FF5722);
     color: white;
-    border: 2px solid transparent;
 }
 
 .primary-btn:hover {
-    background: linear-gradient(135deg, #F57C00, #E64A19);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 87, 34, 0.4);
+    background: linear-gradient(135deg, #3646A8, #3646A8);
+    /* transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 87, 34, 0.4); */
 }
 
 .hero-contact-buttons {
@@ -250,25 +249,19 @@
 .whatsapp-btn {
     background: linear-gradient(135deg, #25D366, #128C7E);
     color: white;
-    border: 2px solid transparent;
 }
 
 .whatsapp-btn:hover {
     background: linear-gradient(135deg, #128C7E, #075E54);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }
 
 .phone-btn {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
-    border: 2px solid transparent;
 }
 
 .phone-btn:hover {
     background: linear-gradient(135deg, #5a6fd8, #6a42a0);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
 }
 
 .hero-btn i {
