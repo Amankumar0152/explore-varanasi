@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Boat Ride on the Ganges | Holy River Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .hero {
+            padding: 3rem 0 2rem;
+            text-align: center;
+            background: linear-gradient(rgba(26, 35, 126, 0.9), rgba(74, 20, 140, 0.8)), url('https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero .subtitle {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            opacity: 0.95;
+        }
+        .russian-title {
+            font-size: 1.6rem;
+            color: #FFD700;
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            margin-top: 1.5rem;
+            border: 2px solid #FFD700;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+        }
+        .tour-brief {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 900px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            text-align: center;
+            border-left: 5px solid #4CAF50;
+        }
+        .tour-brief p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        .tour-brief .russian-brief {
+            color: #1a237e;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 2px dashed #ccc;
+        }
+        .swiper {
+            width: 100%;
+            max-width: 1000px;
+            height: 550px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            margin: 2rem auto;
+        }
+        .swiper-slide {
+            position: relative;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slide-caption {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 12px 25px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            backdrop-filter: blur(3px);
+            border-left: 4px solid #FFD700;
+        }
+        .tour-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+        .tour-itinerary {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .section-title {
+            color: #1a237e;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid #4CAF50;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+        }
+        .section-title i {
+            color: #4CAF50;
+        }
+        .itinerary-points {
+            list-style: none;
+            margin: 2rem 0;
+        }
+        .itinerary-points li {
+            padding: 1.2rem;
+            margin-bottom: 1.2rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #1a237e;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: transform 0.3s;
+        }
+        .itinerary-points li:hover {
+            transform: translateX(5px);
+            background: #e8f5e9;
+        }
+        .point-icon {
+            background: #1a237e;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        .point-content h4 {
+            color: #1a237e;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        .point-content p {
+            color: #666;
+        }
+        .activity-details {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .detail-card {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid #d1e3ff;
+        }
+        .detail-card i {
+            font-size: 2.2rem;
+            color: #1a237e;
+            background: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .detail-content h4 {
+            color: #1a237e;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        .detail-content p {
+            color: #555;
+            font-weight: 500;
+        }
+        .russian-highlight {
+            background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+            padding: 1.8rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #d32f2f;
+        }
+        .russian-highlight h4 {
+            color: #d32f2f;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .russian-highlight p {
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .booking-sidebar {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+        .price-box {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #1a237e, #4a148c);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+        }
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+        .price span {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .book-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            border: none;
+            padding: 1.2rem;
+            font-size: 1.3rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+        .book-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+        }
+        .included-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        .included-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .included-list i {
+            color: #4CAF50;
+        }
+        .russian-note {
+            background: #FFF8E1;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+            text-align: center;
+            border: 1px solid #FFD54F;
+            font-weight: 600;
+            color: #5D4037;
+        }
+        @media (max-width: 1100px) {
+            .tour-details-grid {
+                grid-template-columns: 1fr;
+            }
+            .booking-sidebar {
+                position: static;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .swiper {
+                height: 400px;
+            }
+            .tour-details-grid, .details-grid {
+                grid-template-columns: 1fr;
+            }
+            .tour-itinerary, .activity-details, .booking-sidebar {
+                padding: 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .russian-title {
+                font-size: 1.2rem;
+                padding: 0.6rem 1.5rem;
+            }
+            .swiper {
+                height: 300px;
+            }
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <h1>Sunrise Boat Ride on the Ganges</h1>
+            <p class="subtitle">Experience the spiritual awakening of Varanasi with a serene morning boat ride along the holy river, witnessing ancient rituals and breathtaking sunrise views.</p>
+            <div class="russian-title">
+                Рассветная лодочная прогулка по Гангу — духовное пробуждение!
+            </div>
+        </section>
+
+        <div class="tour-brief">
+            <p>This tranquil 3-hour experience takes you through the heart of Varanasi's spiritual life. Watch the city wake up with ancient Hindu rituals, hear temple bells echo across the river, and capture stunning sunrise photos over the ghats.</p>
+            <p class="russian-brief">Идеально для духовного туризма и уникальных фотографий!</p>
+        </div>
+
+        <!-- Image Gallery Slider -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/image/backgrounds/Nepali temple.webp" alt="Ganges Sunrise">
+                    <div class="slide-caption">Golden Sunrise over the Ganges River</div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="/image/backgrounds/street-dogs.webp" alt="Morning Rituals">
+                    <div class="slide-caption">Morning Aarti Rituals at Dasashwamedh Ghat</div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="/image/book-tour/varanasi.webp" alt="Traditional Boat">
+                    <div class="slide-caption">Traditional Wooden Boat Ride Experience</div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="/image/village-tour/" alt="Ghats View">
+                    <div class="slide-caption">Panoramic View of Varanasi Ghats</div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="tour-details-grid">
+            <div class="tour-content">
+                <div class="tour-itinerary">
+                    <h2 class="section-title"><i class="fas fa-route"></i> Tour Itinerary & Points</h2>
+                    
+                    <ul class="itinerary-points">
+                        <li>
+                            <div class="point-icon">1</div>
+                            <div class="point-content">
+                                <h4>Start Point: Dasashwamedh Ghat</h4>
+                                <p><strong>Time:</strong> 5:00 AM (Before Sunrise)</p>
+                                <p><strong>Meeting:</strong> Our guide will meet you at the main entrance with a welcome kit including bottled water and traditional prayer lamp.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-icon">2</div>
+                            <div class="point-content">
+                                <h4>Boat Departure & Sunrise Viewing</h4>
+                                <p><strong>Duration:</strong> 45 minutes</p>
+                                <p><strong>Activity:</strong> Board our traditional wooden boat. Experience the magical moment as the sun rises over the Ganges, creating golden reflections on the water. Perfect for photography.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-icon">3</div>
+                            <div class="point-content">
+                                <h4>Break Point: Assi Ghat</h4>
+                                <p><strong>Time:</strong> 5:45 AM - 6:15 AM</p>
+                                <p><strong>Activity:</strong> Disembark for 30 minutes. Witness morning yoga sessions, enjoy masala chai from local vendors, and visit the small Shiva temple. Restroom facilities available.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-icon">4</div>
+                            <div class="point-content">
+                                <h4>Ghat Tour & Ritual Observation</h4>
+                                <p><strong>Duration:</strong> 1 hour</p>
+                                <p><strong>Activity:</strong> Continue boat ride past Manikarnika and Scindia Ghats. Observe morning rituals, bathing traditions, and hear explanations of each ghat's significance from our guide.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-icon">5</div>
+                            <div class="point-content">
+                                <h4>End Point: Man Mandir Ghat</h4>
+                                <p><strong>Time:</strong> 7:15 AM</p>
+                                <p><strong>Final Activity:</strong> Participate in a brief Ganga Aarti ceremony. Receive blessing from priest. Tour concludes with breakfast recommendations and assistance with return transportation.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="russian-highlight">
+                        <h4><i class="fas fa-language"></i> Для русских туристов:</h4>
+                        <p>Этот тур специально разработан для комфортного знакомства с духовной жизнью Варанаси. Наш русскоговорящий гид подробно объяснит все ритуалы и традиции. Мы обеспечиваем безопасность, чистую питьевую воду и удобную посадку в лодку. <strong>Отличный выбор для первого знакомства с индийской культурой!</strong></p>
+                        <p style="margin-top: 10px; font-style: italic;">Рекомендуем взять с собой: фотоаппарат, легкую куртку утром, наличные деньги для небольших пожертвований.</p>
+                    </div>
+                </div>
+
+                <div class="activity-details">
+                    <h2 class="section-title"><i class="fas fa-info-circle"></i> Activity Details</h2>
+                    
+                    <div class="details-grid">
+                        <div class="detail-card">
+                            <i class="fas fa-ban"></i>
+                            <div class="detail-content">
+                                <h4>Free Cancellation</h4>
+                                <p>Cancel up to 24 hours before for full refund. No questions asked.</p>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-clock"></i>
+                            <div class="detail-content">
+                                <h4>Duration</h4>
+                                <p>2.5 - 3 hours (including breaks)</p>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-language"></i>
+                            <div class="detail-content">
+                                <h4>Languages</h4>
+                                <p>English, Hindi, Russian guide available</p>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-user-friends"></i>
+                            <div class="detail-content">
+                                <h4>Private Tour</h4>
+                                <p>Exclusive boat for your group only</p>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-bell"></i>
+                            <div class="detail-content">
+                                <h4>Morning Timing</h4>
+                                <p>Starts at 5:00 AM (varies by season)</p>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-ship"></i>
+                            <div class="detail-content">
+                                <h4>Boat Type</h4>
+                                <p>Traditional wooden boat with cushions</p>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-users"></i>
+                            <div class="detail-content">
+                                <h4>Group Size</h4>
+                                <p>1-6 persons per boat (private)</p>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-umbrella-beach"></i>
+                            <div class="detail-content">
+                                <h4>Difficulty Level</h4>
+                                <p>Easy - suitable for all ages</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-sidebar">
+                <div class="price-box">
+                    <p>Starting from</p>
+                    <div class="price">$45<span>/person</span></div>
+                    <p>Private group discounts available</p>
+                </div>
+                
+                <h3><i class="fas fa-check-circle"></i> What's Included</h3>
+                <ul class="included-list">
+                    <li><i class="fas fa-check"></i> Private wooden boat rental</li>
+                    <li><i class="fas fa-check"></i> Expert English/Hindi speaking guide</li>
+                    <li><i class="fas fa-check"></i> Bottled drinking water</li>
+                    <li><i class="fas fa-check"></i> Traditional prayer lamp</li>
+                    <li><i class="fas fa-check"></i> Life jackets for all participants</li>
+                    <li><i class="fas fa-check"></i> All government taxes & fees</li>
+                    <li><i class="fas fa-check"></i> Photography assistance</li>
+                </ul>
+                
+                <h3><i class="fas fa-times-circle"></i> Not Included</h3>
+                <ul class="included-list">
+                    <li><i class="fas fa-times"></i> Hotel pickup & drop-off</li>
+                    <li><i class="fas fa-times"></i> Breakfast or meals</li>
+                    <li><i class="fas fa-times"></i> Temple entry donations</li>
+                    <li><i class="fas fa-times"></i> Personal expenses</li>
+                </ul>
+                
+                <a href="booking-form.html?tour=Sunrise%20Boat%20Ride%20on%20the%20Ganges" class="book-btn" style="text-decoration: none; display: block; text-align: center">
+                <i class="fas fa-calendar-check"></i> Book This Sunrise Experience</a>
+                
+                <div class="russian-note">
+                    <p><i class="fas fa-comment"></i> Русский гид доступен по предварительному запросу!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Booking System -->
+<script>
+// WhatsApp booking configuration
+const whatsappConfig = {
+    phoneNumber: "9565194075", // Replace with your WhatsApp number
+    countryCode: "91", // Your country code
+    preMessage: "Hello! I want to book the Sunrise Boat Ride on the Ganges tour.\n\n" +
+                "Tour Details:\n" +
+                "• Sunrise Boat Ride on the Ganges\n" +
+                "• Duration: 2.5-3 hours\n" +
+                "• Price: $45 per person\n" +
+                "• Private Tour\n\n" +
+                "Please let me know about:\n" +
+                "1. Available dates\n" +
+                "2. Group size options\n" +
+                "3. Payment process\n\n" +
+                "Thank you!"
+};
+
+// Function to track clicks and redirect to WhatsApp
+function bookViaWhatsApp(tourName = "Sunrise Boat Ride on the Ganges") {
+    // Get visitor information
+    const visitorInfo = {
+        timestamp: new Date().toISOString(),
+        tour: tourName,
+        pageUrl: window.location.href,
+        userAgent: navigator.userAgent,
+        referrer: document.referrer,
+        screenResolution: `${screen.width}x${screen.height}`,
+        language: navigator.language || navigator.userLanguage,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+    };
+    
+    // Send tracking data to your server
+    trackWhatsAppClick(visitorInfo);
+    
+    // Format phone number (remove leading zero if any)
+    let phone = whatsappConfig.phoneNumber;
+    if (phone.startsWith('0')) {
+        phone = phone.substring(1);
+    }
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappConfig.preMessage);
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappConfig.countryCode}${phone}?text=${encodedMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+}
+
+// Function to send tracking data to server
+function trackWhatsAppClick(data) {
+    // Method 1: Using Google Analytics (if you have GA)
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'whatsapp_click', {
+            'event_category': 'Booking',
+            'event_label': data.tour,
+            'value': 1
+        });
+    }
+    
+    // Method 2: Using your own backend API
+    fetch('https://your-backend-api.com/track-whatsapp', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+        mode: 'no-cors' // Remove this if your backend supports CORS
+    }).catch(error => {
+        console.log('Tracking sent (no-cors mode)');
+    });
+    
+    // Method 3: Using localStorage for offline tracking
+    try {
+        let clicks = JSON.parse(localStorage.getItem('whatsapp_clicks') || '[]');
+        clicks.push({
+            ...data,
+            localTimestamp: new Date().toLocaleString()
+        });
+        localStorage.setItem('whatsapp_clicks', JSON.stringify(clicks.slice(-50))); // Keep last 50 clicks
+    } catch (e) {
+        console.log('Local storage tracking failed');
+    }
+    
+    // Method 4: Using image pixel (simple tracking)
+    const trackingPixel = new Image();
+    trackingPixel.src = `https://your-backend-api.com/track-pixel?tour=${encodeURIComponent(data.tour)}&time=${Date.now()}`;
+}
+
+// Admin function to view tracked clicks (for testing)
+function viewTrackedClicks() {
+    const clicks = JSON.parse(localStorage.getItem('whatsapp_clicks') || '[]');
+    console.log('📊 WhatsApp Clicks Tracked:', clicks);
+    alert(`Total clicks tracked locally: ${clicks.length}\nCheck console for details.`);
+}
+</script>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+        });
+    </script>
+</body>
+</html>
