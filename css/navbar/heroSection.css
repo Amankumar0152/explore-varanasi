@@ -119,6 +119,12 @@
     background-color: #f9f9f9;
     border-radius: 8px;
 }
+.vns-image{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
 .vns h1{
     font-family: cursive;
     color: rgb(139, 199, 19);
