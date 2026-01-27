@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/pages/city.css">
     <link rel="stylesheet" href="css/content/contents.css">
     <link rel="stylesheet" href="css/navbar/heroSection.css">
+    <link rel="stylesheet" href="css/navbar/sliderGallery.css">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Explore Banaras | Tourist Guide ">
@@ -58,7 +59,7 @@
                         <li><a href="#free-village-tour-coming-soon">Free Village Tour</a></li>
                     </ul>
                 </li>
-                <li><a href="#user-profile-comingsoon">About</a></li>
+                <li><a href="/about.html">About</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
             
@@ -87,6 +88,61 @@
     </div>
 </section>
 
+<div class="vns">
+    <h1>Discover the Spiritual Soul of Varanasi</h1>
+    <p>Welcome to Varanasi, <span class="highlight">one of the oldest living cities in the world</span> and the spiritual heart of India. This tour helps you understand the culture, religion, and daily life of this holy city on the banks of the River Ganges. <br> <br>
+    During the tour, you will visit famous ghats and temples, walk through old city lanes, and see important rituals and traditions. Your local guide will explain the meaning of prayers, ceremonies, and the spiritual life of the people in a simple and clear way.
+    This tour is ideal for travelers who want to learn about Indian culture, spirituality, and history, and experience the real life of Varanasi in a respectful and memorable way. <br> <br>
+    Discover the <span class="highlight">spiritual heart of India</span> in Varanasi. Explore <span class="highlight">ancient ghats, sacred temples, and historic lanes,</span> and experience authentic rituals along the Ganges with a local guide. A perfect blend of culture, spirituality, and tradition.
+    </p>
+    <img src="image/backgrounds/street-dogs.png" alt="Varanasi Street Puppies" class="vns-image">
+</div>
+
+<div class="vns">
+    <h1>Varanasi – The Oldest Living City in the World</h1>
+    <p>Varanasi, also known as Kashi and Banaras, is considered one of the oldest continuously inhabited cities in the world, with a history dating back over 3,000 years. Situated on the banks of the sacred River Ganga, Varanasi is the spiritual heart of India and a major center of Hindu philosophy, rituals, and culture. <br> <br>
+
+    <span class="special">The city is famous for its ancient ghats, narrow heritage lanes, historic temples, and timeless traditions. Pilgrims believe that attaining death in Varanasi leads to moksha (liberation from the cycle of rebirth), making it one of the most sacred destinations in Hinduism. </span><br> <br>
+
+    Today, Varanasi is also a vibrant cultural city where rituals, learning, music, silk weaving, and daily life coexist in perfect harmony.</p>
+    <!-- Slider Gallery -->
+     <div class="custom-slider-container">
+    <div class="slider-wrapper" id="sliderWrapper">
+        <img src="/image/ghats/Assi-ghat-tour.webp" class="slide-img" alt="Image 1">
+        <img src="image/ghats/evening-ganga-aarti.webp" class="slide-img" alt="Image 2">
+        <img src="image/ghats/manikarnika-ghat-sacred-ghat.webp" class="slide-img" alt="Image 3">
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+
+    <div class="dots-container" id="dotsContainer"></div>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <span class="close-btn" onclick="closeLightbox(event)">&times; Close</span>
+        <img id="lightbox-img" src="" alt="Full View">
+    </div>
+</div>
+
+<div class="vns">
+    <h1>About Heritage Walk in Varanasi</h1>
+    <p>A Varanasi Heritage Walk is the best way to truly experience the soul of the city. Unlike vehicle tours, a heritage walk allows you to explore hidden alleys, ancient temples, historic ghats, traditional homes, and local life at a slow and meaningful pace.</p> <br>
+    <p>
+        During the walk, you will discover: <br> <br>
+
+    1. Stories from ancient scriptures and medieval history. <br>
+
+    2. The significance of ghats, temples, and sacred trees. <br>
+
+    3. Local traditions followed for hundreds of years. <br>
+
+    4. Daily rituals, festivals, and spiritual practices. <br> <br>
+
+    Every street in Varanasi tells a story, and a heritage walk connects you deeply with the city’s past and present. <br></p>
+    <img src="image/backgrounds/streetogs.png" alt="Varanasi Street Dogs" class="vns-image">
+</div>
+
     <!-- Popular Tours Section -->
     <section class="content">
         <h2 class="section-title">Popular Tours in Varanasi</h2>
@@ -103,7 +159,7 @@
                         <span><i class="fas fa-users"></i> Min- 4 People</span>
                     </div>
                     <div class="tour-price">$20 per person</div>
-                    <a href="book-tour.html" class="hero-btn phone-btn">Book Now</a>
+                    <a href="book-tour.html" class="hero-btn phone-btn">View Details</a>
                 </div>
             </div>
             <div class="tour-card">
@@ -116,7 +172,7 @@
                         <span><i class="fas fa-users"></i> Small Group</span>
                     </div>
                     <div class="tour-price">$20 per person</div>
-                    <a href="book-tour.html" class="hero-btn phone-btn">Book Now</a>
+                    <a href="book-tour.html" class="hero-btn phone-btn">View Details</a>
                 </div>
             </div>
             <div class="tour-card">
@@ -129,7 +185,7 @@
                         <span><i class="fas fa-users"></i> Small Group</span>
                     </div>
                     <div class="tour-price">$15 per person</div>
-                    <a href="book-tour.html" class="hero-btn phone-btn">Book Now</a>
+                    <a href="book-tour.html" class="hero-btn phone-btn">View Details</a>
                 </div>
             </div>
             <div class="tour-card">
@@ -142,7 +198,7 @@
                         <span><i class="fas fa-users"></i> Private Tour</span>
                     </div>
                     <div class="tour-price">$25 per person</div>
-                    <a href="book-tour.html" class="hero-btn phone-btn">Book Now</a>
+                    <a href="book-tour.html" class="hero-btn phone-btn">View Details</a>
                 </div>
             </div>
             <div class="tour-card">
@@ -155,7 +211,7 @@
                         <span><i class="fas fa-users"></i> Small Group</span>
                     </div>
                     <div class="tour-price">$15 per person</div>
-                    <a href="book-tour.html" class="hero-btn phone-btn">Book Now</a>
+                    <a href="book-tour.html" class="hero-btn phone-btn">View Details</a>
                 </div>
             </div>
         </div>
@@ -260,10 +316,12 @@
         </div>
     </div>
 </section>
+    <!-- Slider Gallery -->
+     <script src="js/sliderGallery.js"></script>
 
+    <!-- Footer Section -->
     <div id="footer"></div>
     <script src="js/include.js"></script>
-
     <script src="js/navbar.js"></script>
 </body>
 </html>
