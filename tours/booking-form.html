@@ -327,7 +327,7 @@
                 allBookings.push(bookingData);
                 localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(allBookings));
                 
-                console.log(`✅ Booking saved to localStorage. Total: ${allBookings.length}`);
+                console.log(`Booking saved to localStorage. Total: ${allBookings.length}`);
                 return { success: true, count: allBookings.length };
             } catch (error) {
                 console.error("❌ Error saving to localStorage:", error);
@@ -344,20 +344,20 @@
             });
             
             return `========================================
-📋 NEW BOOKING RECEIVED - GANGES TOUR
+NEW BOOKING RECEIVED - GANGES TOUR
 ========================================
-🕐 Booking Time: ${timestamp}
-📌 Booking ID: ${bookingData.id}
+Booking Time: ${timestamp}
+Booking ID: ${bookingData.id}
 
 ========================================
-👤 GUEST INFORMATION
+GUEST INFORMATION
 ========================================
 Full Name: ${bookingData.fullName}
 Email: ${bookingData.email}
 WhatsApp: ${bookingData.whatsapp}
 
 ========================================
-🎯 TOUR DETAILS
+TOUR DETAILS
 ========================================
 Tour Name: ${bookingData.tourName}
 Tour Date: ${bookingData.tourDate}
@@ -366,13 +366,13 @@ Number of People: ${bookingData.peopleCount}
 Special Requirements: ${bookingData.specialReq || 'None'}
 
 ========================================
-🌐 TECHNICAL INFORMATION
+TECHNICAL INFORMATION
 ========================================
 Page URL: ${bookingData.pageUrl}
 Saved At: ${bookingData.savedAt}
 ========================================
 
-🔔 REMINDER: Contact guest within 24 hours!
+REMINDER: Contact guest within 24 hours!
 ========================================`;
         }
         
@@ -410,16 +410,16 @@ Saved At: ${bookingData.savedAt}
 • Email: ${bookingData.email}
 • WhatsApp: ${bookingData.whatsapp}
 
-🎯 *Tour Details:*
+*Tour Details:*
 • Tour: ${bookingData.tourName}
 • Date: ${bookingData.tourDate}
 • Time: ${bookingData.tourTime}
 • People: ${bookingData.peopleCount}
 
-💬 *Special Request:* ${bookingData.specialReq || 'None'}
+*Special Request:* ${bookingData.specialReq || 'None'}
 
-⏰ *Booking Time:* ${new Date().toLocaleString()}
-📍 *Booking ID:* ${bookingData.id}`;
+*Booking Time:* ${new Date().toLocaleString()}
+*Booking ID:* ${bookingData.id}`;
             
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/${CONFIG.ADMIN_WHATSAPP}?text=${encodedMessage}`;
@@ -531,7 +531,7 @@ Saved At: ${bookingData.savedAt}
                 }
                 
                 let content = `========================================
-📊 ALL BOOKINGS - GANGES TOUR
+ALL BOOKINGS - GANGES TOUR
 ========================================
 Total Bookings: ${allBookings.length}
 Generated: ${new Date().toLocaleString()}
@@ -540,7 +540,7 @@ Generated: ${new Date().toLocaleString()}
                 
                 allBookings.forEach((booking, index) => {
                     content += `\n\n${'-'.repeat(40)}\n`;
-                    content += `📋 BOOKING #${index + 1}\n`;
+                    content += `BOOKING #${index + 1}\n`;
                     content += `${'-'.repeat(40)}\n`;
                     content += `Name: ${booking.fullName}\n`;
                     content += `Email: ${booking.email}\n`;
@@ -571,7 +571,7 @@ Generated: ${new Date().toLocaleString()}
                     return;
                 }
                 
-                console.group('📊 All Bookings in localStorage');
+                console.group('All Bookings in localStorage');
                 console.table(allBookings.map(b => ({
                     ID: b.id,
                     Name: b.fullName,
