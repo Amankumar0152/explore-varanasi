@@ -307,8 +307,8 @@
     }
 
     /* slide images – simple unsplash, peaceful (same as before) */
-    .slide1 { background-image: url('/image/ganga-aarti/sunrise-boatride.webp'); }
-    .slide2 { background-image: url('/image/ganga-aarti/Varanasi-evening-ganga-aarti.webp'); }
-    .slide3 { background-image: url('/image/ganga-aarti/Ganga-Aarti-Assi-Ghat.webp'); }
-    .slide4 { background-image: url('/image/ganga-aarti/Cremation-Ghat.webp'); }
-    .slide5 { background-image: url('/image/ganga-aarti/Manikarnika-ghat.webp'); }
+    .slide1 { background-image: url('/image/tours/sunset-aarti/sunrise-boatride.webp'); }
+    .slide2 { background-image: url('/image/tours/sunset-aarti/Varanasi-evening-ganga-aarti.webp'); }
+    .slide3 { background-image: url('/image/tours/sunset-aarti/Ganga-Aarti-Assi-Ghat.webp'); }
+    .slide4 { background-image: url('/image/tours/sunset-aarti/Cremation-Ghat.webp'); }
+    .slide5 { background-image: url('/image/tours/sunset-aarti/Manikarnika-ghat.webp'); }
