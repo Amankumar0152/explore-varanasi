@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Sunset Boat · Ganga Aarti</title>
-  <link rel="stylesheet" href="/tours/css/tours.css">
+  <title>Sunset Boat Ride Ganga Aarti</title>
+  <!-- Font Awesome (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/tours/css/tours.css">
 </head>
 <body>
 
 <div class="tour-card">
-  <!-- medium size slider :: left / right buttons -->
+  <!-- slider gallery with images written in HTML (not CSS) -->
   <div class="slider-box">
     <div class="slider-view">
       <div class="slider-track" id="track">
-        <div class="slide slide1"></div>
-        <div class="slide slide2"></div>
-        <div class="slide slide3"></div>
-        <div class="slide slide4"></div>
-        <div class="slide slide5"></div>
+        <div class="slide"><img src="/image/tours/sunset-aarti/sunrise-boatride.webp" alt="Sunset boat Ride in Ganges"></div>
+        <div class="slide"><img src="/image/tours/sunset-aarti/Ganga-Aarti-Assi-Ghat.webp" alt="Ganga Aarti at Assi Ghat"></div>
+        <div class="slide"><img src="/image/tours/sunset-aarti/Varanasi-evening-ganga-aarti.webp" alt="Varanasi Evening Ganga Aarti"></div>
+        <div class="slide"><img src="/image/tours/sunset-aarti/Manikarnika-ghat.webp" alt="Manikarnika Ghat"></div>
+        <div class="slide"><img src="/image/tours/sunset-aarti/Cremation-Ghat.webp" alt="Cremation Ghat of Varanasi"></div>
       </div>
     </div>
     <button class="slider-arrow left" id="leftArrow"><i class="fas fa-chevron-left"></i></button>
     <button class="slider-arrow right" id="rightArrow"><i class="fas fa-chevron-right"></i></button>
   </div>
 
-  <!-- simple dots -->
+  <!-- dots -->
   <div class="dot-row" id="dotRow">
     <span class="dot-simple active" data-index="0"></span>
     <span class="dot-simple" data-index="1"></span>
@@ -34,15 +35,23 @@
     <span class="dot-simple" data-index="4"></span>
   </div>
 
-  <h2 class="tour-title">Sunset Boat Ride with Evening Ganga Aarti</h2>
+  <!-- title exactly as in image -->
+  <h2 class="tour-title">Sacred Ganga Sunrise Experience</h2>
   <div class="meta-line">
-    <span><i class="fas fa-clock"></i> 2 hours Tour</span>
+    <span><i class="far fa-clock"></i> 2 hours Tour</span>
   </div>
 
-  <!-- split into two columns: left deep details / right booking + whatsapp -->
+  <!-- main content -->
   <div class="details-panel">
+    <!-- LEFT column: description exactly as in image -->
     <div class="info-col">
       <div class="deep-text">
+        <!-- feature list (exactly as in image) -->
+        <ul class="feature-list" style="margin-top: 2rem;">
+          <li><i class="fas fa-ship"></i> 1-hour Private Boat Ride</li>
+          <li><i class="fas fa-fire"></i> Best view of the Ganga Aarti (no crowd)</li>
+          <li><i class="fas fa-camera"></i> Boat stops at scenic spots for photography</li>
+        </ul>
         <p><strong>Sunset Boat Ride with Evening Ganga Aarti –</strong> Discover the timeless beauty of Varanasi, one of the world’s oldest living cities, where spirituality and tradition flow along the sacred Ganges. As the sun begins to set, step onto a boat and glide past the ancient ghats while the sky turns golden and the river reflects the city’s sacred energy.</p>
         <p style="margin-top: 1.2rem;">
           Witness the mesmerizing Ganga Aarti, where priests perform rituals with glowing lamps, rhythmic chants, and the sound of bells filling the evening air. From the peaceful vantage point of the river, experience this divine ceremony away from the crowds.
@@ -65,28 +74,32 @@
       </div>
     </div>
 
+    <!-- RIGHT column: price + buttons exactly as in image -->
     <div class="action-col">
       <div class="price-card">
         <div class="price-amount">₹2199 <small>/ person</small></div>
-        <div class="price-note"><i class="fas fa-leaf"></i> all inclusive, no hidden fees</div>
+        <div class="price-note">all inclusive, no hidden fees</div>
       </div>
 
-      <a href="/tours/booking-form.html"rel="noopener" class="btn btn-book">
+      <!-- book now button -->
+      <a href="https://example.com/book-now" target="_blank" rel="noopener" class="btn btn-book">
         <i class="fas fa-calendar-check"></i> Book now
       </a>
 
-      <a href="https://wa.me/919565194075?text=Hi! I'm interested in booking the Sunset Boat Ride with Evening Ganga Aarti" target="_blank" rel="noopener" class="btn btn-wa">
+      <!-- chat on whatsapp button (exactly "Chat & Book on WhatsApp") -->
+      <a href="https://wa.me/919565194075?text=Hi, I would like to know more about the Sacred Ganga Sunrise Experience." target="_blank" rel="noopener" class="btn btn-wa">
         <i class="fab fa-whatsapp"></i> Chat & Book on WhatsApp
       </a>
 
+      <!-- trust line exactly as in image -->
       <div class="extra-trust">
-        <i class="fas fa-shield-alt"></i> <span>free cancellation · instant confirmation</span>
+        <i class="fas fa-shield-alt"></i> <span>free cancellation - instant confirmation</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Script for Gallery Slider -->
-<script src="/tours/js/tours.js"></script>
+<script src="/tours/js/slider.js"></script>
+
 </body>
 </html>
