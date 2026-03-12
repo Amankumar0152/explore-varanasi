@@ -11,14 +11,12 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      padding: 1.5rem 1rem;
     }
 
     .tour-card {
       max-width: 1200px;
       width: 100%;
       background: #ffffff;
-      border-radius: 32px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
       padding: 2rem 2rem;
       border: 1px solid #e6d5c0;
@@ -213,12 +211,8 @@
 
     /* manikarnika highlight */
     .manikarnika-highlight {
-      margin-top: 1.5rem;
-      background: #e6d9c8;
-      padding: 1rem 1.5rem;
-      border-radius: 60px;
       font-size: 1.1rem;
-      border-left: 6px solid #b45f2b;
+      color: cornflowerblue;
     }
 
     /* price & buttons */
